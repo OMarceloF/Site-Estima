@@ -4,8 +4,17 @@
   font-family: "Open Sans", sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   width: 100vw;
+  overflow-x: hidden;
+}
+
+.navbar-nav {
+  background-color: white;
 }
 
 .header {
@@ -15,7 +24,12 @@ body {
   background-color: white;
   z-index: 100000;
   width: 100%;
-  min-height: 25vh;
+  min-height: 15vh;
+  height: 22vh;
+}
+
+.navzinha {
+  display: flex;
 }
 
 .container01 {
@@ -37,7 +51,6 @@ body {
 
 .logoPc {
   width: 281px;
-  height: 10px;
   margin-left: 120px;
   margin-right: 175px;
 }
@@ -120,89 +133,23 @@ body {
 }
 
 .container04 {
-  min-height: 65vh;
+  min-height: 35vh;
 }
 
 .estrutura {
   font-size: 15px;
   color: #444343;
+  display: flex;
 }
 
 .estrutura img {
+  width: 250px;
+  margin-right: 15px;
+}
+
+.imgleft {
   width: 100%;
-  padding-bottom: 15px;
-}
-
-.item1 {
-  background-image: url(/Imagens/bgpadrao.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item2 {
-  background-image: url(/Imagens/bg1.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item3 {
-  background-image: url(/Imagens/bg2.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item4 {
-  background-image: url(/Imagens/bg3.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item5 {
-  background-image: url(/Imagens/bg4.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item6 {
-  background-image: url(/Imagens/bg5.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item7 {
-  background-image: url(/Imagens/bg6.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item8 {
-  background-image: url(/Imagens/bg7.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item9 {
-  background-image: url(/Imagens/bg8.jpeg);
-  min-height: 85vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: flex;
 }
 
 .imgfooter {
@@ -221,6 +168,7 @@ body {
   background-color: white;
   display: flex;
   align-items: center;
+  padding: 30px;
 }
 
 .textFrase p {
@@ -281,7 +229,7 @@ body {
 
 .vets {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .card-text {
@@ -517,6 +465,17 @@ p {
 }
 
 @media (max-width: 1100px) {
+  .imgleft {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bg {
+    margin-bottom: 15px;
+    width: 85%;
+  }
+  .bg img {
+    width: 100%;
+  }
   .text {
     font-size: 18px;
   }
@@ -542,6 +501,9 @@ p {
 }
 
 @media (max-width: 782px) {
+  .brandText {
+    width: 100%;
+  }
   .container07 {
     min-height: 30vh;
   }
@@ -572,8 +534,8 @@ p {
   }
   .card {
     font-size: 18px;
-    width: 500px;
-    height: 400px;
+    width: 700px;
+    height: 800px;
   }
   .card img {
     width: 100%;
