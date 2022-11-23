@@ -12,6 +12,11 @@ body {
   overflow-x: hidden;
 }
 
+.navbar-light .navbar-toggler {
+  background-color: white;
+  margin-top: -20px;
+}
+
 .navbar-nav {
   background-color: white;
 }
@@ -32,7 +37,7 @@ body {
 }
 
 .container01 {
-  min-height: 25vh;
+  min-height: 20vh;
 }
 
 #navbarNav a {
@@ -46,6 +51,7 @@ body {
 }
 
 .logoPc {
+  height: 18vh;
   width: 281px;
   margin-left: 120px;
   margin-right: 175px;
@@ -53,7 +59,10 @@ body {
 
 .container02 {
   min-height: 60vh;
-  background-color: #4062bb;
+  background-image: url("/Imagens/pexels-pixabay-248273.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80% 20%;
 }
 
 .brand {
@@ -74,16 +83,25 @@ body {
 
 .brandText {
   width: 70%;
-  font-weight: bold;
-  font-size: 40px;
+  font-weight: bolder;
+  font-size: 45px;
   padding: 0px 50px 0px 0px;
   margin: 43px 0px 80px;
   color: #ffffff;
 }
 
 .brandNum {
-  font-size: 30px;
+  font-size: 25px;
+  padding: 15px;
   color: white;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+.brandNum:hover {
+  border-color: gray;
+  color: gray;
 }
 
 .container03 {
@@ -94,7 +112,12 @@ body {
 
 .sobrenos {
   display: flex;
+  align-items: center;
   height: fit-content;
+}
+
+.img-fluid {
+  height: 115%;
 }
 
 .textimg {
@@ -118,14 +141,27 @@ body {
   line-height: 1.8em;
 }
 
+.card-img,
+.card-img-bottom,
+.card-img-top {
+  width: 600px;
+  height: 750px;
+}
+
 .sobre {
   color: #545454;
-  font-size: 28px;
+  width: 70%;
+  font-weight: bolder;
+  font-size: 45px;
+  padding: 0px 10px 0px 0px;
+  margin: 0x;
 }
 
 .clinica {
   color: blue;
-  font-size: 28px;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 
 .container04 {
@@ -146,10 +182,6 @@ body {
 .imgleft {
   width: 100%;
   display: flex;
-}
-
-.imgfooter {
-  width: 40%;
 }
 
 .titleStruct {
@@ -208,8 +240,10 @@ body {
 
 .vetTitle {
   color: #545454;
-  font-size: 22px;
-  font-weight: bold;
+  width: 70%;
+  font-weight: bolder;
+  font-size: 45px;
+  padding: 0px 10px 0px 0px;
 }
 
 .vetSubtitle {
@@ -239,8 +273,14 @@ body {
   font-weight: bold;
 }
 
+.numero {
+  text-decoration: none;
+  color: #fff;
+}
+
 .container07 {
   min-height: 50vh;
+  margin-top: 40px;
 }
 
 .listasservices {
@@ -298,16 +338,12 @@ body {
   background-color: rgba(173, 173, 173, 0.2);
 }
 
-.container07 {
-  background-color: rgba(173, 173, 173, 0.2);
-}
-
 .container05color {
   background-color: rgba(173, 173, 173, 0.2);
 }
 
 .container09 {
-  min-height: 90vh;
+  min-height: 30vh;
   background-color: #4062bb;
 }
 
@@ -370,7 +406,7 @@ p {
 
 .footer {
   background-color: #4062bb;
-  min-height: 15vh;
+  min-height: 5vh;
   display: flex;
   text-align: center;
   align-items: center;
@@ -382,7 +418,9 @@ p {
 }
 
 .sobreText {
-  color: #444343;
+  color: rgba(68, 67, 67, 0.6862745098);
+  font-size: 22px;
+  font-weight: 300;
 }
 
 #subir {
@@ -404,6 +442,9 @@ p {
 }
 
 @media (max-width: 1500px) {
+  .brandNum {
+    margin-bottom: 30px;
+  }
   .container02 {
     min-height: 30vh;
   }
@@ -454,11 +495,23 @@ p {
   }
 }
 @media (max-width: 1300px) {
+  .container03 {
+    padding: 0px;
+  }
+  .sobrenos {
+    align-items: flex-start;
+  }
   .text {
     font-size: 22px;
   }
+  .lastImg {
+    visibility: hidden;
+  }
 }
 @media (max-width: 1100px) {
+  .lastImg {
+    visibility: visible;
+  }
   .imgleft {
     flex-direction: column;
     align-items: center;
@@ -479,19 +532,64 @@ p {
   }
 }
 @media (max-width: 1000px) {
+  .sobrenos {
+    display: flex;
+    flex-direction: column;
+  }
+  .textimg {
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+  }
+  .prefooter {
+    gap: 10px;
+  }
+  .buttonNum {
+    padding: 5px 45px;
+  }
+  .imgVets img {
+    width: 400px;
+    height: 500px;
+  }
+  .flui05 {
+    gap: 20px;
+  }
+  .img img {
+    min-height: 600px;
+    width: 145%;
+  }
   .text {
     font-size: 14px;
   }
+  .brandTitle {
+    font-size: 20px;
+  }
 }
 @media (max-width: 850px) {
+  .sobreText {
+    font-size: 27px;
+    width: 100%;
+  }
   .text {
     font-size: 12px;
+    line-height: normal;
   }
   .caixas {
     width: 100%;
   }
 }
 @media (max-width: 782px) {
+  .container06 {
+    min-height: 210vh;
+  }
+  .navbar-light .navbar-toggler {
+    margin-top: -35px;
+  }
+  .text {
+    margin: 25px;
+    padding: 25px;
+  }
   .brandText {
     width: 100%;
   }
@@ -502,7 +600,7 @@ p {
     min-height: 10vh;
   }
   .container09 {
-    min-height: 60vh;
+    min-height: 40vh;
   }
   .listasservices {
     flex-direction: column;
@@ -518,22 +616,22 @@ p {
     flex-direction: column;
   }
   .sobrenos img {
-    width: 500px;
+    width: 100%;
   }
   .estrutura {
     flex-direction: column;
   }
   .card {
     font-size: 18px;
-    width: 700px;
+    width: 480px;
     height: 800px;
   }
   .card img {
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
   .container05 {
-    margin-top: 90px;
+    margin-top: -20px;
   }
   .flui05 {
     flex-direction: column;
@@ -553,6 +651,40 @@ p {
   }
 }
 @media (max-width: 490px) {
+  .vetText {
+    font-size: 18px;
+  }
+  .container05 {
+    margin-top: 0;
+  }
+  .text {
+    width: 95%;
+    margin: 0;
+  }
+  .vetTitle {
+    font-size: 35px;
+  }
+  .sobre {
+    font-size: 35px;
+  }
+  .sobreText {
+    font-size: 18px;
+  }
+  .container05 button {
+    font-size: 15px;
+  }
+  .textFrase p {
+    font-size: 17px;
+  }
+  .card {
+    height: auto;
+  }
+  .container02 {
+    min-height: 55vh;
+  }
+  .header {
+    position: relative;
+  }
   #subir {
     visibility: hidden;
   }
@@ -563,10 +695,13 @@ p {
     width: auto;
   }
   .brandText {
-    font-size: 30px;
+    font-size: 25px;
   }
   .brandNum {
-    font-size: 30px;
+    font-size: 25px;
+  }
+  .brandTitle {
+    font-size: 15px;
   }
   .sobrenos {
     width: 100%;
@@ -574,6 +709,100 @@ p {
   .text {
     padding: 10px;
     font-size: 16px;
+  }
+}
+@media (max-width: 300px) {
+  .footerText {
+    font-size: 17px;
+  }
+  .imgfooter {
+    width: 200px;
+    height: 200px;
+  }
+  .prefooter p {
+    font-size: 17px;
+  }
+  .prefooter a {
+    font-size: 17px;
+  }
+  .app {
+    margin-right: 75px;
+  }
+  .siga-nos {
+    visibility: hidden;
+  }
+  .service-title {
+    font-size: 18px;
+  }
+  .service-subtitle {
+    font-size: 15px;
+  }
+  .service-subtitle li {
+    font-size: 16px;
+  }
+  .card {
+    width: 14rem;
+  }
+  .card-text {
+    font-size: 16px;
+  }
+  .vetSubtitle {
+    font-size: 18px;
+  }
+  .vetText {
+    font-size: 16px;
+  }
+  .buttonNum {
+    padding: 7px 10px;
+  }
+  .container05 {
+    padding: 5px;
+  }
+  .container05 button {
+    font-size: 10px;
+  }
+  .textFrase p {
+    font-size: 15px;
+  }
+  .sobrenos img {
+    width: 120%;
+  }
+  .container03 {
+    padding: 20px;
+  }
+  .text {
+    width: 100%;
+    font-size: 12px;
+  }
+  .textimg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    width: 30vh;
+  }
+  .sobreText {
+    font-size: 14px;
+    margin: 0;
+  }
+  .sobre {
+    font-size: 18px;
+  }
+  .header {
+    position: relative;
+  }
+  .img img {
+    min-height: 217px;
+  }
+  .brandNum {
+    font-size: 15px;
+  }
+  .brandTitle {
+    font-size: 15px;
+  }
+  .brandText {
+    font-size: 20px;
+    margin: 15px;
+    padding: 0;
   }
 }
 
